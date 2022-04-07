@@ -1,0 +1,247 @@
+/* Calendar */
+/* Weekdays (Mon-Sun) */
+.weekdays {
+    margin: 0;
+    display: flex;
+}
+
+.weekdays div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 23%;
+    height: 43px;
+    color: #666;
+    font-weight: 700;
+    font-size: 14px;
+    /* border: 1px solid #bab8b3; */
+}
+
+/* Days (1-31) */
+.days {
+    background: #eee;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.days div {
+    width: 78px;
+    height: 29px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    color: #777;
+    border-bottom: 1px solid #bab8b3;
+    border-left: 1px solid #bab8b3;
+}
+
+.days div:nth-child(7n) {
+    border-right: 1px solid #bab8b3;
+}
+
+.days div:nth-child(-n+7) {
+    border-top: 1px solid #bab8b3;
+}
+
+/* Highlight the "current" day */
+.days__active {
+    background: #000;
+    color: white !important;
+}
+
+.days__active--blue {
+    background: #0089cf;
+    color: white !important;
+}
+
+/* End of calendar */
+
+
+
+/* newsletter */
+.newsletter {
+    overflow: hidden;
+    height: 40x;
+    width: 330px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.newsletter input {
+    width: 100%;
+    border: 1px solid white;
+    height: 40px;
+    padding: 10px 0 10px 15px;
+    color: #616161;
+    border: 1px solid #bcbcbc;
+    border-radius: 40px;
+    outline: none;
+    font-size: 12px;
+    font-style: italic;
+    -moz-transition: border 0.2s ease;
+    -o-transition: border 0.2s ease;
+    -webkit-transition: border 0.2s ease;
+    transition: border 0.2s ease;
+}
+
+.newsletter input:focus {
+    border: 1px solid #999;
+}
+
+.newsletter input:focus+button {
+    background-color: #fff;
+    border: 1px solid #0089cf;
+    color: #0089cf;
+}
+
+.newsletter input:focus+button:hover {
+    background-color: #0089cf;
+    color: #fff;
+}
+
+.newsletter button {
+    position: absolute;
+    z-index: 999;
+    right: 0px;
+    top: 0px;
+    height: 40px;
+    border: none;
+    border-radius: 0 40px 40px 0;
+    overflow: hidden;
+    background-color: #0089cf;
+    -moz-transition: background-color 0.3s ease, width 0.3s ease;
+    -o-transition: background-color 0.3s ease, width 0.3s ease;
+    -webkit-transition: background-color 0.3s ease, width 0.3s ease;
+    transition: background-color 0.3s ease, width 0.3s ease;
+    color: white;
+    padding: 0;
+    margin: 0;
+    text-transform: uppercase;
+    width: 120px;
+    text-align: center;
+    cursor: pointer;
+    transform: translateZ(0);
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.newsletter button:hover {
+    width: 140px;
+}
+
+* {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+/* koniec - newsletter */
+
+/* kalendarz tabelka */
+table,
+td,
+th {
+    border: 1px solid #bab8b3;
+    font-size: 12px;
+    color: #777;
+}
+
+td {
+    padding: 8px 0;
+}
+
+.td-active {
+    background-color: #000;
+    color: #fff;
+}
+
+.td-active--blue {
+    background-color: #0089cf;
+    color: #fff;
+}
+
+td:hover {
+    background-color: #0089cf;
+    color: #fff;
+}
+
+.clearfloat {
+    clear: both;
+    height: 0;
+    font-size: 1px;
+    line-height: 0px;
+}
+
+
+/* Style the list */
+ul.offer_nav-breadcrumb {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* Display list items side by side */
+ul.offer_nav-breadcrumb li {
+    display: inline;
+    font-size: 11px;
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul.offer_nav-breadcrumb li+li:before {
+    padding: 8px;
+    color: black;
+    content: "/\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul.offer_nav-breadcrumb li a {
+    color: #000;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul.offer_nav-breadcrumb li a:hover {
+    color: #0089cf;
+    text-decoration: underline;
+}
+
+/* lista jezykow */
+
+/* Style the list */
+ul#lang {
+    padding: 0;
+    list-style: none;
+    margin: 0;
+}
+
+/* Display list items side by side */
+ul#lang li {
+    display: inline;
+    font-size: 11px;
+
+}
+
+/* Add a slash symbol (/) before/behind each list item */
+ul#lang li+li:before {
+   
+    color: black;
+    content: "|\00a0";
+}
+
+/* Add a color to all links inside the list */
+ul#lang li a {
+    padding: 10px;
+    color: #000;
+    text-decoration: none;
+}
+
+/* Add a color on mouse-over */
+ul#lang li a:hover {
+    color: #fff;
+    text-decoration: none;
+    background-color: #000;
+}

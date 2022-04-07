@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>DEKOTERAPIA</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style-dod.css" />
+  <link rel="stylesheet" href="css/style-resp.css" />
+  <link rel="stylesheet" href="css/nav.css" />
+  <link href="https://fonts.googleapis.com/css?family=Bebas+Neue|Lato&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+</head>
+
+<body>
+  <nav>
+    <!-- <div class="container">
+        <div class="nav_social">
+          <a href="#"><img src="img/nav-fb.png" alt=""/></a>
+          <a href="#"><img src="img/nav-pin.png" alt=""/></a>
+        </div>
+        
+        <div class="nav_main">
+          <ul class="menu">
+            <li class="menu_item"><a href="#">KONTAKT</a></li>
+            <li class="menu_item"><a href="#">O NAS</a></li>
+            <li class="menu_item"><a href="#">JAK KUPOWAĆ</a></li>
+            <li class="menu_item"><a href="#">REGULAMIN</a></li>
+            <li class="menu_item"><a href="#">NEWSLETTER</a></li>
+            <li class="menu_item"><a href="#">PRODUCENCI</a></li>
+            <li class="menu_item"><a href="#">ZAPRZYJAŹNIONE FIRMY</a></li>
+          </ul>
+            
+         
+        </div>
+        <div class="nav_cart"><a href="#"
+          >KOSZYK (0)<img src="img/nav-koszyk.png" alt=""/></a
+      ></div>
+      </div> -->
+
+    <div class="topnav" id="myTopnav">
+      <div class="container">
+        <div class="nav_social">
+          <a href="#"><img src="img/nav-fb.png" alt="" /></a>
+          <a href="#"><img src="img/nav-pin.png" alt="" /></a>
+        </div>
+
+        <a href="#">KONTAKT</a>
+        <a href="#">O NAS</a>
+        <a href="#">JAK KUPOWAĆ</a>
+        <a href="#">REGULAMIN</a>
+        <a href="#">NEWSLETTER</a>
+        <a href="#">PRODUCENCI</a>
+        <a href="#">ZAPRZYJAŹNIONE FIRMY</a>
+        <div class="dropdown">
+          <button class="dropbtn">
+            PRODUKTY
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">NOWOŚCI</a>
+            <a href="#">KUCHNIA</a>
+            <a href="#">TKANINY</a>
+            <a href="#">PRZECHOWYWANIE</a>
+            <a href="#">DODATKI</a>
+            <a href="#">OGRÓD</a>
+          </div>
+        </div>
+        <div class="nav_cart">
+          <a href="#">KOSZYK (0)<img src="img/nav-koszyk.png" alt="" /></a>
+        </div>
+        <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+    </div>
+  </nav>
+  <header>
+    <div class="container">
+      <a href="#"><img src="img/logo.jpg" alt="" /></a>
+      <div class="header_search">
+        <form action="#">
+          <input type="search" />
+        </form>
+        <div class="header_login">
+          <a href="#">LOGOWANIE</a><span style="margin: 0 10px">|</span><a href="#">REJESTRACJA</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="header_nav container">
+    <ul>
+      <li><a href="#">NOWOŚCI</a></li>
+      <li><a href="#">KUCHNIA</a></li>
+      <li><a href="#">TKANINY</a></li>
+      <li><a href="#">PRZECHOWYWANIE</a></li>
+      <li><a href="#">DODATKI</a></li>
+      <li><a href="#">OGRÓD</a></li>
+      <li><a href="#">BLOG</a></li>
+    </ul>
+  </div>
+  <main>
+    <section class="cart container">
+      <h1>TWÓJ KOSZYK</h1>
+      <span class="cart_subtittle">DEKOTERAPIA > KOSZYK</span>
+      <div class="cart_products">
+        <div class="cart_products-header">
+          <div>PRODUKTY</div>
+          <div>CENA</div>
+          <div>ILOŚĆ</div>
+          <div>WARTOŚĆ</div>
+        </div>
+        <div class="cart_products-item">
+          <div>
+            <div><img src="img/produkty/cart_karafka.jpg" alt="" /></div>
+            KARAFKA
+          </div>
+          <div>42 ZŁ</div>
+          <div>
+            <span class="cart-products-item-minus">-</span> 1
+            <span class="cart-products-item-plus">+</span>
+          </div>
+          <div>42 zł</div>
+        </div>
+        <div class="cart_products-item">
+          <div>
+            <div><img src="img/produkty/cart_duzanarzuta.jpg" alt="" /></div>
+            DUŻA NARZUTA NA ŁÓŻKO
+          </div>
+          <div>680 ZŁ</div>
+          <div>
+            <span class="cart-products-item-minus">-</span> 1
+            <span class="cart-products-item-plus">+</span>
+          </div>
+          <div>680 zł</div>
+        </div>
+      </div>
+      <div class="cart_products-bottom">SUMA: 1082 ZŁ</div>
+    </section>
+    <section class="shipment container">
+      <div class="shipment_info">
+        <h2>DANE DO WYSYŁKI</h2>
+        <form action="#" method="POST" id="shipment-info" name="shipment-info">
+          <div>
+            <label for="txtFirstName">IMIĘ*</label><br />
+            <input type="text" id="txtFirstName" name="txtFirstName" /><br /><br />
+            <label for="txtLastName">NAZWISKO*</label><br />
+            <input type="text" id="txtLastName" name="txtLastName" /><br /><br />
+            <label for="txtCompanyName">NAZWA FIRMY</label><br />
+            <input type="txtCompanyName" id="txtCompanyName" name="txtCompanyName" /><br /><br />
+            <label for="txtNipCode">NIP</label><br />
+            <input type="text" id="txtNipCode" name="txtNipCode" /><br /><br />
+          </div>
+          <div>
+            <label for="txtAdress">ADRES*</label><br />
+            <input type="text" id="txtAdress" name="txtAdress" /><br /><br />
+            <label for="txtZipCode">KOD POCZTOWY*</label><br />
+            <input type="text" inputmode="numeric" id="txtZipCode" name="txtZipCode" /><br /><br />
+            <label for="txtCity">MIEJSCOWOŚĆ*</label><br />
+            <input type="text" id="txtCity" name="txtCity" /><br /><br /><br />
+            <button type="submit" form="shipment-info" value="Submit">
+              ZAPISZ ZMIANY
+            </button>
+          </div>
+        </form>
+      </div>
+      <div class="transport_type">
+        <h2>RODZAJ TRANSPORTU</h2>
+        <label for="ship_courier" class="ship_courier">
+          <span class="ship_method-name"> <input type="checkbox" id="ship_courier" name="ship_courier" />PRZESYŁKA
+            KURIERSKA</span>
+          <span class="ship_method-price">16,50 ZŁ</span>
+        </label>
+
+        <br /><br />
+
+        <label for="ship_post" class="ship_courier">
+          <span class="ship_method-name"><input type="checkbox" id="ship_post" name="ship_post" />PRZESYŁKA
+            POCZTOWA</span>
+          
+          <span class="ship_method-price">11,50 ZŁ</span>
+        </label>
+        <br />
+        <h2>FORMA PŁATNOŚCI</h2>
+
+        <label for="pay-online" class="ship_courier">
+          <span class="ship_method-name"><input type="checkbox" id="pay-online" name="pay-online" />PŁATNOŚĆ
+            ONLINE</span>
+         
+          <span class="ship_method-price">0 ZŁ</span>
+        </label>
+        <br /><br />
+
+        <label for="pay-local" class="ship_courier">
+          <span class="ship_method-name"><input type="checkbox" id="pay-local" name="pay-local" />PŁATNOŚĆ PRZY
+            ODBIORZE</span>
+         
+          <span class="ship_method-price">16,50 ZŁ</span>
+        </label>
+        <br /><br /><br />
+
+        <label for="vat">
+          <span class="ship_method-name"><input type="checkbox" id="vat" name="vat" />CHCĘ OTRZYMAĆ FAKTURĘ VAT</span>
+        </label>
+      </div>
+    </section>
+    <div class="shipment_bottom container">
+      DO ZAPŁATY: 1098.50 ZŁ
+      <button>ZAMAWIAM</button>
+    </div>
+  </main>
+  <footer class="container">
+    <div class="footer_main">
+      <img src="img/logo_lg.jpg" alt="" />
+      <div class="footer_menu">
+        <ul>
+          <li><a href="#">NOWOŚCI</a></li>
+          <li>
+            <a href="#">KUCHNIA</a>
+            <ul>
+              <li><a href="#">CERAMIKA</a></li>
+              <li><a href="#">SZKŁO</a></li>
+              <li><a href="#">CHLEBAKI</a></li>
+              <li><a href="#">INNE</a></li>
+            </ul>
+          </li>
+          <li>
+            <a href="#">TKANINY</a>
+            <ul>
+              <li><a href="#">OBRUSY</a></li>
+              <li><a href="#">PODUSZKI</a></li>
+              <li><a href="#">KOCE, PLEDY, NARZUTY</a></li>
+              <li><a href="#">RĘCZNIKI KUCHENNE</a></li>
+              <li><a href="#">INNE</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul>
+          <li><a href="#">PRZECHOWYWANIE</a></li>
+          <li>
+            <a href="#">DODATKI</a>
+            <ul>
+              <li><a href="#">DEKORACJE</a></li>
+              <li><a href="#">MAŁE MEBLE</a></li>
+              <li><a href="#">TABLICE</a></li>
+              <li><a href="#">ŚWIECZNIKI</a></li>
+              <li><a href="#">WIESZAKI</a></li>
+              <li><a href="#">WAZONY</a></li>
+              <li><a href="#">LAMPKI</a></li>
+              <li><a href="#">TASIEMKI</a></li>
+            </ul>
+          </li>
+          <li><a href="#">OGRÓD</a></li>
+          <li><a href="#">BLOG</a></li>
+        </ul>
+      </div>
+      <div class="footer_contact">
+        <h2>KONTAKT</h2>
+        <a href="mailto:info@dekoterapia.pl">info@dekoterapia.pl</a><br />
+        LUB TELEFONICZNIE (W GODZINACH 09:00 - 19:00)<br />
+        <a href="tel:+48502555284">+48 502 555 284</a><br />
+        ZAWSZE JESTEŚMY DO PAŃSTWA DYSPOZYCJI <br />
+        EKIPA DEKOTERAPIA.PL
+      </div>
+    </div>
+    <div class="footer_bottom">
+      <div>
+        <ul class="menu">
+          <li><a href="#">DEKOTERAPIA</a></li>
+          <li><a href="#">KONTAKT</a></li>
+          <li><a href="#">O NAS</a></li>
+          <li><a href="#">JAK KUPOWAĆ</a></li>
+          <li><a href="#">REGULAMIN</a></li>
+          <li><a href="#">NEWSLETTER</a></li>
+          <li><a href="#">PRODUCENCI</a></li>
+          <li><a href="#">ZAPRZYJAŹNIONE FIRMY</a></li>
+        </ul>
+        &copy; 2016 Dekoterapia.pl Wszelkie prawa zastrzeżone
+      </div>
+    </div>
+    <div style="clear: both;"></div>
+  </footer>
+  <script src="js/nav.js"></script>
+</body>
+
+</html>
